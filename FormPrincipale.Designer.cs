@@ -58,7 +58,7 @@ namespace Lebonfrancais.service
             this.tbAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.tbAdmin.Location = new System.Drawing.Point(12, 419);
             this.tbAdmin.Name = "tbAdmin";
-            this.tbAdmin.Size = new System.Drawing.Size(110, 19);
+            this.tbAdmin.Size = new System.Drawing.Size(73, 19);
             this.tbAdmin.TabIndex = 0;
             // 
             // menuStrip1
@@ -100,6 +100,8 @@ namespace Lebonfrancais.service
             // 
             // reconnecterToolStripMenuItem
             // 
+            this.reconnecterToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.reconnecterToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Menu;
             this.reconnecterToolStripMenuItem.Name = "reconnecterToolStripMenuItem";
             this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reconnecterToolStripMenuItem.Text = "Reconnecter";
@@ -107,7 +109,7 @@ namespace Lebonfrancais.service
             // 
             // quitterToolStripMenuItem1
             // 
-            this.quitterToolStripMenuItem1.BackColor = System.Drawing.Color.DarkRed;
+            this.quitterToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
             this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.quitterToolStripMenuItem1.Text = "Quitter";
@@ -125,6 +127,8 @@ namespace Lebonfrancais.service
             // 
             // outilInscritToolStripMenuItem
             // 
+            this.outilInscritToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.outilInscritToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.outilInscritToolStripMenuItem.Name = "outilInscritToolStripMenuItem";
             this.outilInscritToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.outilInscritToolStripMenuItem.Text = "outil Inscrits";
@@ -132,6 +136,8 @@ namespace Lebonfrancais.service
             // 
             // outilServicesToolStripMenuItem
             // 
+            this.outilServicesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.outilServicesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.outilServicesToolStripMenuItem.Name = "outilServicesToolStripMenuItem";
             this.outilServicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.outilServicesToolStripMenuItem.Text = "outil Services";
@@ -149,6 +155,8 @@ namespace Lebonfrancais.service
             // 
             // afficherLesInscritsToolStripMenuItem
             // 
+            this.afficherLesInscritsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.afficherLesInscritsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.afficherLesInscritsToolStripMenuItem.Name = "afficherLesInscritsToolStripMenuItem";
             this.afficherLesInscritsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.afficherLesInscritsToolStripMenuItem.Text = "afficher les inscrits";
@@ -156,6 +164,8 @@ namespace Lebonfrancais.service
             // 
             // afficherLesServicesToolStripMenuItem
             // 
+            this.afficherLesServicesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.afficherLesServicesToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.afficherLesServicesToolStripMenuItem.Name = "afficherLesServicesToolStripMenuItem";
             this.afficherLesServicesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.afficherLesServicesToolStripMenuItem.Text = "afficher les services";
