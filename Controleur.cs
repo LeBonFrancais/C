@@ -34,9 +34,13 @@ namespace Lebonfrancais.service
         {
             VmodeleI = new ModeleInscrits();
         }
-        public static void initUtilisateur()
+        public static void initService()
         {
-            VmodeleI = new ModeleInscrits();
+            VmodeleSe = new ModeleServices();
+        }
+        public static void initStatistique()
+        {
+            VmodeleStat = new ModeleStatistique();
         }
     }
 }
