@@ -38,7 +38,7 @@ namespace Lebonfrancais.service
             if (Controleur.VmodeleC.Connopen && tbLogin.Text != "" && tbMdp.Text != "")
             {
                 // on recherche l'utilisateur connecté avec le login
-                Controleur.VmodeleC.charger_Utilisateur(tbLogin.Text);
+                Controleur.VmodeleC.charger_Administrateur(tbLogin.Text);
 
                 // s'il existe bien un utilisateur avec ce login
                 if (Controleur.VmodeleC.Chargement)
@@ -46,12 +46,12 @@ namespace Lebonfrancais.service
                     if (Controleur.VmodeleC.DT[0].Rows.Count != 0)
                     {
                         // on compare le mot de passe saisi avec le mot de passe crypté de la BD lié à ce login     
-                        if (BCrypt.Net.BCrypt.Verify(tbMdp.Text, Controleur.VmodeleC.DT[0].Rows[0]["MOTPASSE"].ToString()))
+                        if (BCrypt.Net.BCrypt.Verify(tbMdp.Text, Controleur.VmodeleC.DT[0].Rows[0]["MOTDEPASSE"].ToString()))
                         {
-                            MessageBox.Show("Connecté en tant qu'utilisateur '" + Controleur.VmodeleC.DT[0].Rows[0]["NOM"].ToString() + "'");
+                            MessageBox.Show("Connecté en tant qu'utilisateur '" + Controleur.VmodeleC.DT[0].Rows[0]["PSEUDO"].ToString() + "'");
 
                             // on ouvre la vue principale de l'application en passant en paramètre le nom de l'utilisateur
-                            FormPrincipale FC = new FormPrincipale(Controleur.VmodeleC.DT[0].Rows[0]["NOM"].ToString());
+                            FormPrincipale FC = new FormPrincipale(Controleur.VmodeleC.DT[0].Rows[0]["PSEUDO"].ToString());
                             FC.Show();
                             this.Hide();
                         }
@@ -65,7 +65,8 @@ namespace Lebonfrancais.service
                         tbLogin.Focus();
                     }
                 }
-            }            
+            }
+            else 
                 MessageBox.Show("ERREUR : Saisir un nom et un mot de passe");
         }
     }

@@ -39,15 +39,15 @@ namespace Lebonfrancais.service
                 {
                     int IdAuteur = Convert.ToInt32(Controleur.VmodeleC.DT[9].Rows[0][0]);
                     // enregistrement de la question en lien avec le thème et niveau
-                    if (Controleur.VmodeleSe.AjoutService(tbLibelle.Text, tbDescription.Text, checkBoxRecherche.Checked, checkBoxRecherche.Checked, textBoxImage.Text, IdAuteur))
+                    //if (Controleur.VmodeleSe.AjoutService(tbLibelle.Text, tbDescription.Text, checkBoxRecherche.Checked, checkBoxRecherche.Checked, textBoxImage.Text, IdAuteur))
                     {
                         // recupérer l'IDFORMATION 
                         // récupération de la dernière formation ajoutée pour avoir son id
                         Controleur.VmodeleSe.charger_Service();
-                        Controleur.VmodeleSe.chargerService_selonI();
-                        string idS = Convert.ToString(Controleur.VmodeleC.DT[8].Rows[0]);
-                        int idI = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[Controleur.VmodeleC.DT[1].Rows.Count - 1]["IDSERVICE"]);
-                        MessageBox.Show("Formation ajoutée n° " + idS + " par " + idI);
+                        //Controleur.VmodeleSe.chargerService_selonI();
+                      //  string idS = Convert.ToString(Controleur.VmodeleC.DT[8].Rows[0]);
+                        //int idI = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[Controleur.VmodeleC.DT[1].Rows.Count - 1]["IDSERVICE"]);
+                        //MessageBox.Show("Formation ajoutée n° " + idS + " par " + idI);
 
                         
                     }
@@ -65,7 +65,7 @@ namespace Lebonfrancais.service
                     int IdAuteur = Convert.ToInt32(Controleur.VmodeleC.DT[9].Rows[0][0]);
                     int idF = id;
                     // enregistrement de la question en lien avec le thème et niveau
-                    if (Controleur.VmodeleSe.modificationService(tbLibelle.Text, tbDescription.Text, tbDescription.Text, checkBoxRecherche.Checked, dtpDateV.Value, textBoxImage.Text, IdAuteur, idF))
+                  //  if (Controleur.VmodeleSe.modificationService(tbLibelle.Text, tbDescription.Text, tbDescription.Text, checkBoxRecherche.Checked, dtpDateV.Value, textBoxImage.Text, IdAuteur, idF))
                     {
                         DialogResult dialogResult = MessageBox.Show("La formation à bien été modifié", "INFORMATIONS", MessageBoxButtons.OK);
                         if (dialogResult == DialogResult.OK)

@@ -34,55 +34,88 @@ namespace Lebonfrancais.service
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConnexion
             // 
-            this.btnConnexion.Location = new System.Drawing.Point(112, 237);
+            this.btnConnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(41)))), ((int)(((byte)(84)))));
+            this.btnConnexion.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnexion.ForeColor = System.Drawing.Color.White;
+            this.btnConnexion.Location = new System.Drawing.Point(112, 257);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(144, 56);
             this.btnConnexion.TabIndex = 0;
-            this.btnConnexion.Text = "Se Connecter";
-            this.btnConnexion.UseVisualStyleBackColor = true;
+            this.btnConnexion.Text = "Se connecter";
+            this.btnConnexion.UseVisualStyleBackColor = false;
             this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
             // tbMdp
             // 
-            this.tbMdp.Location = new System.Drawing.Point(224, 132);
+            this.tbMdp.Location = new System.Drawing.Point(205, 180);
             this.tbMdp.Name = "tbMdp";
-            this.tbMdp.Size = new System.Drawing.Size(100, 20);
+            this.tbMdp.Size = new System.Drawing.Size(123, 20);
             this.tbMdp.TabIndex = 7;
+            this.tbMdp.UseSystemPasswordChar = true;
             // 
             // tbLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(224, 79);
+            this.tbLogin.Location = new System.Drawing.Point(205, 127);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(100, 20);
+            this.tbLogin.Size = new System.Drawing.Size(123, 20);
             this.tbLogin.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 122);
+            this.label2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(72, 177);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(115, 22);
             this.label2.TabIndex = 5;
             this.label2.Text = "Mot de passe";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 79);
+            this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(72, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(55, 22);
             this.label1.TabIndex = 4;
             this.label1.Text = "Login";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.label3.Location = new System.Drawing.Point(181, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 32);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "CONNEXION ";
+            // 
+            // Logo
+            // 
+            this.Logo.Image = global::Lebonfrancais.service.Properties.Resources.logo_sans_fond;
+            this.Logo.InitialImage = null;
+            this.Logo.Location = new System.Drawing.Point(12, 12);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(92, 83);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 8;
+            this.Logo.TabStop = false;
             // 
             // FormConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 361);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.tbMdp);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.label2);
@@ -91,6 +124,7 @@ namespace Lebonfrancais.service
             this.Name = "FormConnexion";
             this.Text = "FormConnexion";
             this.Load += new System.EventHandler(this.FormConnexion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +137,7 @@ namespace Lebonfrancais.service
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.Label label3;
     }
 }

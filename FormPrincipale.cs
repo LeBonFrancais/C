@@ -59,7 +59,7 @@ namespace Lebonfrancais.service
 
         private void reconnecterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Threading.Thread monthread = new System.Threading.Thread(new System.Threading.ThreadStart(ouvrirnouveauform);            
+            System.Threading.Thread monthread = new System.Threading.Thread(new System.Threading.ThreadStart(ouvrirnouveauform));            
             monthread.Start();
             this.Close();
         }
@@ -76,7 +76,7 @@ namespace Lebonfrancais.service
 
         private void outilServicesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormOutilServices formOutilServices = new FormOutilServices();
+            FormOutilServices formOutilServices = new FormOutilServices(-1);
             formOutilServices.Show();
         }
 
