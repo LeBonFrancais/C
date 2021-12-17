@@ -21,7 +21,7 @@ namespace Lebonfrancais.service
 
         private void FormOutilServices_Load(object sender, EventArgs e)
         {
-            Controleur.initServices();
+            Controleur.initService();
             if (id == -1)
             {
                 btnAjoutModif.Text = "Modifier";
@@ -39,7 +39,7 @@ namespace Lebonfrancais.service
                 {
                     int IdAuteur = Convert.ToInt32(Controleur.VmodeleC.DT[9].Rows[0][0]);
                     // enregistrement de la question en lien avec le thème et niveau
-                    if (Controleur.VmodeleSe.AjoutService(tbLibelle.Text, tbDescription.Text, checkBoxRecherche.Checked, cbVisible.Checked, dtpDateV.Value, textBoxImage.Text, IdAuteur))
+                    if (Controleur.VmodeleSe.AjoutService(tbLibelle.Text, tbDescription.Text, checkBoxRecherche.Checked, checkBoxRecherche.Checked, textBoxImage.Text, IdAuteur))
                     {
                         // recupérer l'IDFORMATION 
                         // récupération de la dernière formation ajoutée pour avoir son id
@@ -60,12 +60,12 @@ namespace Lebonfrancais.service
             else
             {
                 // vérifier que le libellé et le lien video sont renseignés au minimum
-                if (tbLibelle.Text != "" && tbVideo.Text != "")
+                if (tbLibelle.Text != "" && tbDescription.Text != "")
                 {
                     int IdAuteur = Convert.ToInt32(Controleur.VmodeleC.DT[9].Rows[0][0]);
                     int idF = id;
                     // enregistrement de la question en lien avec le thème et niveau
-                    if (Controleur.VmodeleSe.modificationService(tbLibelle.Text, tbDescription.Text, tbVideo.Text, cbVisible.Checked, dtpDateV.Value, textBoxImage.Text, IdAuteur, idF))
+                    if (Controleur.VmodeleSe.modificationService(tbLibelle.Text, tbDescription.Text, tbDescription.Text, checkBoxRecherche.Checked, dtpDateV.Value, textBoxImage.Text, IdAuteur, idF))
                     {
                         DialogResult dialogResult = MessageBox.Show("La formation à bien été modifié", "INFORMATIONS", MessageBoxButtons.OK);
                         if (dialogResult == DialogResult.OK)
