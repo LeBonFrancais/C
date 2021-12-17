@@ -35,14 +35,14 @@ namespace Lebonfrancais.service
             this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionDesFormationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statistiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilInscritToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afficherLesInscritsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afficherLesServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,8 +59,8 @@ namespace Lebonfrancais.service
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connexionToolStripMenuItem,
-            this.gestionDesFormationsToolStripMenuItem,
-            this.aideToolStripMenuItem,
+            this.outilToolStripMenuItem,
+            this.affichageToolStripMenuItem,
             this.contactToolStripMenuItem,
             this.statistiqueToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -82,14 +82,14 @@ namespace Lebonfrancais.service
             // deconnexionToolStripMenuItem
             // 
             this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.deconnexionToolStripMenuItem.Text = "Deconnexion";
             this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
             // 
             // reconnecterToolStripMenuItem
             // 
             this.reconnecterToolStripMenuItem.Name = "reconnecterToolStripMenuItem";
-            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.reconnecterToolStripMenuItem.Text = "Reconnecter";
             this.reconnecterToolStripMenuItem.Click += new System.EventHandler(this.reconnecterToolStripMenuItem_Click);
             // 
@@ -97,41 +97,18 @@ namespace Lebonfrancais.service
             // 
             this.quitterToolStripMenuItem1.BackColor = System.Drawing.Color.DarkRed;
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
-            // gestionDesFormationsToolStripMenuItem
+            // outilToolStripMenuItem
             // 
-            this.gestionDesFormationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.outilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.outilInscritToolStripMenuItem,
             this.outilServicesToolStripMenuItem});
-            this.gestionDesFormationsToolStripMenuItem.Name = "gestionDesFormationsToolStripMenuItem";
-            this.gestionDesFormationsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.gestionDesFormationsToolStripMenuItem.Text = "Outil";
-            // 
-            // aideToolStripMenuItem
-            // 
-            this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.afficherLesInscritsToolStripMenuItem,
-            this.afficherLesServicesToolStripMenuItem});
-            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.aideToolStripMenuItem.Text = "Affichage";
-            // 
-            // contactToolStripMenuItem
-            // 
-            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.contactToolStripMenuItem.Text = "Contact";
-            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
-            // 
-            // statistiqueToolStripMenuItem
-            // 
-            this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
-            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.statistiqueToolStripMenuItem.Text = "Statistique";
-            this.statistiqueToolStripMenuItem.Click += new System.EventHandler(this.statistiqueToolStripMenuItem_Click);
+            this.outilToolStripMenuItem.Name = "outilToolStripMenuItem";
+            this.outilToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.outilToolStripMenuItem.Text = "Outil";
             // 
             // outilInscritToolStripMenuItem
             // 
@@ -147,6 +124,15 @@ namespace Lebonfrancais.service
             this.outilServicesToolStripMenuItem.Text = "outil Services";
             this.outilServicesToolStripMenuItem.Click += new System.EventHandler(this.outilServicesToolStripMenuItem_Click);
             // 
+            // affichageToolStripMenuItem
+            // 
+            this.affichageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afficherLesInscritsToolStripMenuItem,
+            this.afficherLesServicesToolStripMenuItem});
+            this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
+            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.affichageToolStripMenuItem.Text = "Affichage";
+            // 
             // afficherLesInscritsToolStripMenuItem
             // 
             this.afficherLesInscritsToolStripMenuItem.Name = "afficherLesInscritsToolStripMenuItem";
@@ -160,6 +146,20 @@ namespace Lebonfrancais.service
             this.afficherLesServicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.afficherLesServicesToolStripMenuItem.Text = "afficher les services";
             this.afficherLesServicesToolStripMenuItem.Click += new System.EventHandler(this.afficherLesServicesToolStripMenuItem_Click);
+            // 
+            // contactToolStripMenuItem
+            // 
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
+            // 
+            // statistiqueToolStripMenuItem
+            // 
+            this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
+            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.statistiqueToolStripMenuItem.Text = "Statistique";
+            this.statistiqueToolStripMenuItem.Click += new System.EventHandler(this.statistiqueToolStripMenuItem_Click);
             // 
             // FormPrincipale
             // 
@@ -185,8 +185,8 @@ namespace Lebonfrancais.service
         private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reconnecterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gestionDesFormationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem outilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem affichageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outilInscritToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outilServicesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem afficherLesInscritsToolStripMenuItem;

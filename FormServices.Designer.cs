@@ -30,12 +30,12 @@ namespace Lebonfrancais.service
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgvServices = new System.Windows.Forms.DataGridView();
-            this.btnModif = new System.Windows.Forms.Button();
-            this.btnAjout = new System.Windows.Forms.Button();
-            this.btnValider = new System.Windows.Forms.Button();
-            this.btnPasValider = new System.Windows.Forms.Button();
             this.btnSuppr = new System.Windows.Forms.Button();
+            this.btnPasValider = new System.Windows.Forms.Button();
+            this.btnValider = new System.Windows.Forms.Button();
+            this.btnAjout = new System.Windows.Forms.Button();
+            this.btnModif = new System.Windows.Forms.Button();
+            this.dgvServices = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,43 +64,15 @@ namespace Lebonfrancais.service
             this.splitContainer1.SplitterDistance = 428;
             this.splitContainer1.TabIndex = 0;
             // 
-            // dgvServices
+            // btnSuppr
             // 
-            this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServices.Location = new System.Drawing.Point(3, 3);
-            this.dgvServices.Name = "dgvServices";
-            this.dgvServices.Size = new System.Drawing.Size(850, 663);
-            this.dgvServices.TabIndex = 0;
-            // 
-            // btnModif
-            // 
-            this.btnModif.Location = new System.Drawing.Point(34, 615);
-            this.btnModif.Name = "btnModif";
-            this.btnModif.Size = new System.Drawing.Size(75, 23);
-            this.btnModif.TabIndex = 0;
-            this.btnModif.Text = "Modifier";
-            this.btnModif.UseVisualStyleBackColor = true;
-            this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
-            // 
-            // btnAjout
-            // 
-            this.btnAjout.Location = new System.Drawing.Point(164, 615);
-            this.btnAjout.Name = "btnAjout";
-            this.btnAjout.Size = new System.Drawing.Size(75, 23);
-            this.btnAjout.TabIndex = 1;
-            this.btnAjout.Text = "Ajout";
-            this.btnAjout.UseVisualStyleBackColor = true;
-            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
-            // 
-            // btnValider
-            // 
-            this.btnValider.Location = new System.Drawing.Point(45, 558);
-            this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(75, 23);
-            this.btnValider.TabIndex = 2;
-            this.btnValider.Text = "Valider";
-            this.btnValider.UseVisualStyleBackColor = true;
-            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
+            this.btnSuppr.Location = new System.Drawing.Point(284, 615);
+            this.btnSuppr.Name = "btnSuppr";
+            this.btnSuppr.Size = new System.Drawing.Size(75, 23);
+            this.btnSuppr.TabIndex = 4;
+            this.btnSuppr.Text = "Supprimer";
+            this.btnSuppr.UseVisualStyleBackColor = true;
+            this.btnSuppr.Click += new System.EventHandler(this.BtnSuppr_Click);
             // 
             // btnPasValider
             // 
@@ -112,14 +84,43 @@ namespace Lebonfrancais.service
             this.btnPasValider.UseVisualStyleBackColor = true;
             this.btnPasValider.Click += new System.EventHandler(this.btnPasValider_Click);
             // 
-            // btnSuppr
+            // btnValider
             // 
-            this.btnSuppr.Location = new System.Drawing.Point(284, 615);
-            this.btnSuppr.Name = "btnSuppr";
-            this.btnSuppr.Size = new System.Drawing.Size(75, 23);
-            this.btnSuppr.TabIndex = 4;
-            this.btnSuppr.Text = "Supprimer";
-            this.btnSuppr.UseVisualStyleBackColor = true;
+            this.btnValider.Location = new System.Drawing.Point(45, 558);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(75, 23);
+            this.btnValider.TabIndex = 2;
+            this.btnValider.Text = "Valider";
+            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
+            // 
+            // btnAjout
+            // 
+            this.btnAjout.Location = new System.Drawing.Point(164, 615);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(75, 23);
+            this.btnAjout.TabIndex = 1;
+            this.btnAjout.Text = "Ajout";
+            this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
+            // 
+            // btnModif
+            // 
+            this.btnModif.Location = new System.Drawing.Point(34, 615);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(75, 23);
+            this.btnModif.TabIndex = 0;
+            this.btnModif.Text = "Modifier";
+            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
+            // 
+            // dgvServices
+            // 
+            this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServices.Location = new System.Drawing.Point(3, 3);
+            this.dgvServices.Name = "dgvServices";
+            this.dgvServices.Size = new System.Drawing.Size(850, 663);
+            this.dgvServices.TabIndex = 0;
             // 
             // FormServices
             // 

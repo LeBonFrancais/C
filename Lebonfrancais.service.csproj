@@ -109,6 +109,24 @@
     <Compile Include="ModeleStatistique.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormConnexion.resx">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInscrits.resx">
+      <DependentUpon>FormInscrits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOutilInscrits.resx">
+      <DependentUpon>FormOutilInscrits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOutilServices.resx">
+      <DependentUpon>FormOutilServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipale.resx">
+      <DependentUpon>FormPrincipale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServices.resx">
+      <DependentUpon>FormServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

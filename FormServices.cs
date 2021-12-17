@@ -58,5 +58,22 @@ namespace Lebonfrancais.service
             FormOutilServices formOutilServices = new FormOutilServices(1);
             formOutilServices.Show();
         }
+
+        private void BtnSuppr_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Etes vous sur de vouloir supprimer ce service?", "AVERTISSEMENT", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //appel de la methode dans le modeleFormation qui supprime en cascade toutes les infos liées à l'id selectionné.
+                if (Controleur.VmodeleSe.supprimerFormation(Convert.ToInt32(dgvServices.CurrentRow.Cells[0].Value)))
+                {
+                    FormServices_Load(sender, e);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                FormServices_Load(sender, e);
+            }
+        }
     }
 }

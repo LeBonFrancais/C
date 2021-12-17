@@ -21,6 +21,7 @@ namespace Lebonfrancais.service
         {
             Controleur.initConnexion();
             Controleur.VmodeleC.seconnecter();
+            
             if (Controleur.VmodeleC.Connopen == false)
             {
                 MessageBox.Show("erreur dans la connexion");
@@ -28,7 +29,7 @@ namespace Lebonfrancais.service
             }
             else
             {
-                //MessageBox.Show("connexion réussi");
+                tbLogin.Focus();
             }
         }
 
@@ -46,12 +47,12 @@ namespace Lebonfrancais.service
                     if (Controleur.VmodeleC.DT[0].Rows.Count != 0)
                     {
                         // on compare le mot de passe saisi avec le mot de passe crypté de la BD lié à ce login     
-                        if (BCrypt.Net.BCrypt.Verify(tbMdp.Text, Controleur.VmodeleC.DT[0].Rows[0]["MOTPASSE"].ToString()))
+                        if (BCrypt.Net.BCrypt.Verify(tbMdp.Text, Controleur.VmodeleC.DT[0].Rows[0]["MOTDEPASSE"].ToString()))
                         {
-                            MessageBox.Show("Connecté en tant qu'utilisateur '" + Controleur.VmodeleC.DT[0].Rows[0]["NOM"].ToString() + "'");
+                            MessageBox.Show("Connecté en tant qu'utilisateur '" + Controleur.VmodeleC.DT[0].Rows[0]["PSEUDO"].ToString() + "'");
 
                             // on ouvre la vue principale de l'application en passant en paramètre le nom de l'utilisateur
-                            FormPrincipale FC = new FormPrincipale(Controleur.VmodeleC.DT[0].Rows[0]["NOM"].ToString());
+                            FormPrincipale FC = new FormPrincipale(Controleur.VmodeleC.DT[0].Rows[0]["PSEUDO"].ToString());
                             FC.Show();
                             this.Hide();
                         }
@@ -65,8 +66,7 @@ namespace Lebonfrancais.service
                         tbLogin.Focus();
                     }
                 }
-            }            
-                MessageBox.Show("ERREUR : Saisir un nom et un mot de passe");
+            }                              
         }
     }
 }

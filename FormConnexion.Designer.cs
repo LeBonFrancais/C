@@ -41,7 +41,7 @@ namespace Lebonfrancais.service
             this.btnConnexion.Location = new System.Drawing.Point(112, 237);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(144, 56);
-            this.btnConnexion.TabIndex = 0;
+            this.btnConnexion.TabIndex = 3;
             this.btnConnexion.Text = "Se Connecter";
             this.btnConnexion.UseVisualStyleBackColor = true;
             this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
@@ -50,15 +50,16 @@ namespace Lebonfrancais.service
             // 
             this.tbMdp.Location = new System.Drawing.Point(224, 132);
             this.tbMdp.Name = "tbMdp";
+            this.tbMdp.PasswordChar = '*';
             this.tbMdp.Size = new System.Drawing.Size(100, 20);
-            this.tbMdp.TabIndex = 7;
+            this.tbMdp.TabIndex = 2;
             // 
             // tbLogin
             // 
             this.tbLogin.Location = new System.Drawing.Point(224, 79);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(100, 20);
-            this.tbLogin.TabIndex = 6;
+            this.tbLogin.TabIndex = 1;
             // 
             // label2
             // 

@@ -24,11 +24,11 @@ namespace Lebonfrancais.service
         {
             if (deconnexionToolStripMenuItem.Enabled == false)
             {
-                gestionDesFormationsToolStripMenuItem.Enabled = false;
+                outilToolStripMenuItem.Enabled = false;
             }
             else
             {
-                gestionDesFormationsToolStripMenuItem.Enabled = true;
+                outilToolStripMenuItem.Enabled = true;
             }
 
             reconnecterToolStripMenuItem.Enabled = false;
@@ -52,14 +52,18 @@ namespace Lebonfrancais.service
         {
             Controleur.VmodeleC.sedeconnecter();
             MessageBox.Show("Vous êtes déconnecté de la base de données");
-            gestionDesFormationsToolStripMenuItem.Enabled = false;
+            outilToolStripMenuItem.Enabled = false;
             deconnexionToolStripMenuItem.Enabled = false;
+            outilToolStripMenuItem.Enabled = false;
+            affichageToolStripMenuItem.Enabled = false;
+            contactToolStripMenuItem.Enabled = false;
+            statistiqueToolStripMenuItem.Enabled = false;
             FormPrincipale_Load(sender, e);
         }
 
         private void reconnecterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Threading.Thread monthread = new System.Threading.Thread(new System.Threading.ThreadStart(ouvrirnouveauform);            
+            System.Threading.Thread monthread = new System.Threading.Thread(new System.Threading.ThreadStart(ouvrirnouveauform));            
             monthread.Start();
             this.Close();
         }
@@ -70,13 +74,13 @@ namespace Lebonfrancais.service
 
         private void outilInscritToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormOutilInscrits formOutilInscrits = new FormOutilInscrits();
+            FormOutilInscrits formOutilInscrits = new FormOutilInscrits(-1);
             formOutilInscrits.Show();
         }
 
         private void outilServicesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormOutilServices formOutilServices = new FormOutilServices();
+            FormOutilServices formOutilServices = new FormOutilServices(-1);
             formOutilServices.Show();
         }
 
