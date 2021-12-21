@@ -12,11 +12,14 @@ namespace Lebonfrancais.service
 {
     public partial class FormOutilInscrits : Form
     {
-        private int id = -1;
+
+        private int id = -1; // -1 = ajout
+
         public FormOutilInscrits(int id)
         {
             InitializeComponent();
             this.id = id;
+
         }
 
         private void FormOutilInscrits_Load(object sender, EventArgs e)
@@ -187,5 +190,194 @@ namespace Lebonfrancais.service
         {
 
         }
+
+        private void FormOutilInscrits_Load(object sender, EventArgs e)
+        {
+            Controleur.initService();
+            Controleur.initInscrit();
+            Controleur.VmodeleI.chargerInscrit();
+            Controleur.VmodeleSe.charger_Departement();
+
+            if (id == -1)
+            {
+                btnAjoutModif.Text = "Ajout";
+            }
+            else
+                btnAjoutModif.Text = "Modifier";
+
+
+            cbArrondissement.Visible = false;
+            labelAr.Visible = false;
+            chargerComboBoxDepartement();
+        }
+
+        private void chargerComboBoxDepartement()
+        {
+            cbDepartement.Items.Clear();
+            if (Controleur.VmodeleC.DT[5].Rows.Count == 0)
+            {
+                cbDepartement.Items.Add("Pas de departement en base");
+            }
+            else
+            {
+                for (int i = 0; i < Controleur.VmodeleC.DT[5].Rows.Count; i++)
+                {
+                    cbDepartement.Items.Add(Controleur.VmodeleC.DT[5].Rows[i]["NOM"].ToString());
+                }
+            }
+        }
+
+        private void BtnAnnuler_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAjoutModif_Click_1(object sender, EventArgs e)
+        {
+            if (id == -1)
+            {
+                // condition pour ajouter un service
+                if (tbNom.Text != "" && tbPrenom.Text != "" && tbMdp.Text != "" && tbMail.Text != "")
+                {
+                    //si les mots de passes sont identiques
+                    if (tbMdp.Text == tbConfMdp.Text)
+                    {
+                        //hash du mot de passe
+                        string password = tbMdp.Text;
+                        string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
+                        password = BCrypt.Net.BCrypt.HashPassword(password, mySalt);
+
+                        //recup de l'id du département choisi.
+                        string nomDe = Convert.ToString(cbDepartement.SelectedIndex);
+                        Controleur.VmodeleSe.chargerIdDe_selonNom(nomDe);
+                        int idDe = Convert.ToInt32(Controleur.VmodeleC.DT[3].Rows[0]);
+
+                        //recup de l'id du département choisi.
+                        string nomAr = Convert.ToString(cbArrondissement.SelectedIndex);
+                        Controleur.VmodeleSe.chargerIdAr_selonNom(nomAr);
+                        int idAr = Convert.ToInt32(Controleur.VmodeleC.DT[4].Rows[0]);
+
+                        string statut = "actif";
+
+                        // méthode d'ajout de service.
+                        if (Controleur.VmodeleI.AjoutInscrit(tbNom.Text, tbPrenom.Text, dtpNaiss.Value, tbMail.Text, Convert.ToInt32(tbTel.Text), password, Convert.ToInt32(tbCredit.Text), statut, idDe, idAr))
+                        {
+                            //on récupère le nom de l'utilisateur ajouté dans la bdd
+                            string NomUser = tbNom.Text;
+
+                            //sur le ok du messageBox, on refresh le form
+                            DialogResult dialogResult = MessageBox.Show("Inscrit " + NomUser + " ajouté.", "INFORMATIONS", MessageBoxButtons.OK);
+                            if (dialogResult == DialogResult.OK)
+                            {
+                                BtnAnnuler_Click(sender, e);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERREUR D'INSERTION DANS LA BDD");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("veuillez saisir les mêmes mot de passe");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Veuillez saisir toutes les informations");
+                }
+
+
+
+            }
+            else //on remplit les composants pour pouvoir les changer.
+            {
+                // condition pour ajouter un service
+                if (tbNom.Text != "" && tbPrenom.Text != "" && tbMdp.Text != "" && tbMail.Text != "")
+                {
+                    //si les mots de passes sont identiques
+                    if (tbMdp.Text == tbConfMdp.Text)
+                    {
+                        //hash du mot de passe
+                        string password = tbMdp.Text;
+                        string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
+                        password = BCrypt.Net.BCrypt.HashPassword(password, mySalt);
+
+                        //recup de l'id du département choisi.
+                        string nomDe = Convert.ToString(cbDepartement.SelectedIndex);
+                        Controleur.VmodeleSe.chargerIdDe_selonNom(nomDe);
+                        int idDe = Convert.ToInt32(Controleur.VmodeleC.DT[3].Rows[0]);
+
+                        //recup de l'id du département choisi.
+                        string nomAr = Convert.ToString(cbArrondissement.SelectedIndex);
+                        Controleur.VmodeleSe.chargerIdAr_selonNom(nomAr);
+                        int idAr = Convert.ToInt32(Controleur.VmodeleC.DT[4].Rows[0]);
+
+                        string statut = "actif";
+
+                        // méthode d'ajout de service.
+                        if (Controleur.VmodeleI.modificationInscrit(tbNom.Text, tbPrenom.Text, dtpNaiss.Value, tbMail.Text, Convert.ToInt32(tbTel.Text), password, Convert.ToInt32(tbCredit.Text), statut, idDe, idAr))
+                        {
+                            //on récupère le nom de l'utilisateur ajouté dans la bdd
+                            string NomUser = tbNom.Text;
+
+                            //sur le ok du messageBox, on refresh le form
+                            DialogResult dialogResult = MessageBox.Show("Inscrit " + NomUser + " Modifier.", "INFORMATIONS", MessageBoxButtons.OK);
+                            if (dialogResult == DialogResult.OK)
+                            {
+                                BtnAnnuler_Click(sender, e);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERREUR D'INSERTION DANS LA BDD");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("veuillez saisir les mêmes mot de passe");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Veuillez saisir toutes les informations");
+                }
+            }
+        }
+
+        private void cbDepartement_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            cbArrondissement.Visible = true; // rend visible la combo des arrondissementS
+            labelAr.Visible = true;
+            cbArrondissement.Items.Clear();
+            // recup du libelle selectionné
+            string idDe = Convert.ToString(cbDepartement.SelectedItem);
+            // chargement de l'id en fonction du nom
+            Controleur.VmodeleSe.chargerIdDe_selonNom(idDe);
+            // recup de l'id
+            int idDepartement = Convert.ToInt32(Controleur.VmodeleC.DT[3].Rows[0][0]);
+            //chargement des arrondissement en fonction de l'id departement
+            Controleur.VmodeleSe.charger_ArrondissementSelonDepartement(idDepartement);
+
+            if (cbDepartement.SelectedIndex != -1)
+            {
+                if (Controleur.VmodeleC.DT[2].Rows.Count == 0)
+                {
+                    cbArrondissement.Items.Add("il n'y a rien en base");
+                }
+                else
+                {
+                    // 
+                    for (int i = 0; i < Controleur.VmodeleC.DT[2].Rows.Count; i++)
+                    {
+                        cbArrondissement.Items.Add(Controleur.VmodeleC.DT[2].Rows[i]["NOM"].ToString());
+                    }
+                }
+            }
+        }      
     }
 }

@@ -39,7 +39,7 @@ namespace Lebonfrancais.service
             if (Controleur.VmodeleC.Connopen && tbLogin.Text != "" && tbMdp.Text != "")
             {
                 // on recherche l'utilisateur connecté avec le login
-                Controleur.VmodeleC.charger_Utilisateur(tbLogin.Text);
+                Controleur.VmodeleC.charger_Administrateur(tbLogin.Text);
 
                 // s'il existe bien un utilisateur avec ce login
                 if (Controleur.VmodeleC.Chargement)
@@ -66,7 +66,11 @@ namespace Lebonfrancais.service
                         tbLogin.Focus();
                     }
                 }
-            }                              
+
+            }
+            else 
+                MessageBox.Show("ERREUR : Saisir un nom et un mot de passe");
+
         }
     }
 }

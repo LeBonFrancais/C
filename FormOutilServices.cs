@@ -66,7 +66,9 @@ namespace Lebonfrancais.service
 
                     bool recherche = checkBoxRecherche.Checked;
                     // méthode d'ajout de service.
+
                     if (Controleur.VmodeleSe.AjoutService(tbLibelle.Text, tbDescription.Text, recherche, visible,idInscrit ,idDe , idAr))
+
                     {
                         // recupérer l'IDFORMATION 
                         // récupération de la dernière formation ajoutée pour avoir son id
@@ -77,7 +79,7 @@ namespace Lebonfrancais.service
                         int idS = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[Controleur.VmodeleC.DT[1].Rows.Count - 1]["IDSERVICE"]);
                         MessageBox.Show("Service ajoutée n° " + idS + " Inscrit lié : " + idI);
 
-                        
+
                     }
                 }
                 else
@@ -137,14 +139,18 @@ namespace Lebonfrancais.service
             cbInscrit.Items.Clear();
             if (Controleur.VmodeleC.DT[20].Rows.Count == 0)
             {
+
                 cbInscrit.Items.Add("Pas d'inscrits en base");                
+
             }
             else
             {
                 for (int i = 0; i < Controleur.VmodeleC.DT[20].Rows.Count; i++)
                 {
                     cbInscrit.Items.Add(Controleur.VmodeleC.DT[20].Rows[i]["NOM"].ToString());
+
                 }                
+
             }
         }
         private void chargerComboBoxDepartement()
@@ -169,13 +175,22 @@ namespace Lebonfrancais.service
             cbArrondissement.Visible = true;
             labelAr.Visible = true;
             cbArrondissement.Items.Clear();
-            int idDepartement = Convert.ToInt32(cbDepartement.SelectedIndex);
+
+            // recup du libelle selectionné
+            string idDe = Convert.ToString(cbDepartement.SelectedItem);
+            // chargement de l'id en fonction du nom
+            Controleur.VmodeleSe.chargerIdDe_selonNom(idDe);
+            // recup de l'id
+            int idDepartement = Convert.ToInt32(Controleur.VmodeleC.DT[3].Rows[0][0]);
+            //chargement des arrondissement en fonction de l'id departement
+
             Controleur.VmodeleSe.charger_ArrondissementSelonDepartement(idDepartement);
             if (cbDepartement.SelectedIndex != -1)
             {
                 if (Controleur.VmodeleC.DT[2].Rows.Count == 0)
                 {
-                    //
+
+                    cbArrondissement.Items.Add("il n'y a rien en base");
                 }
                 else
                 {

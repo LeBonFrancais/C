@@ -56,7 +56,9 @@ namespace Lebonfrancais.service
         public void seconnecter()
         {
             // paramètres de connexion à modifier selon sa BD et son serveur de BD
+
             string myConnectionString = "Database=lebonfrancais ;Data Source=localhost;User Id=root; Password= ;SslMode = none;";
+
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative 
             {
@@ -130,7 +132,7 @@ namespace Lebonfrancais.service
         /// méthode qui permet de récupérer les informations de l'utilisateur connecté selon son login, s"il exsite
         /// </summary>
         /// <param name="login"></param>
-        public void charger_Utilisateur(string login)
+        public void charger_Administrateur(string login)
         {
             charger("select * from administrateur where PSEUDO = '" + login + "';", DT[0]);
         }

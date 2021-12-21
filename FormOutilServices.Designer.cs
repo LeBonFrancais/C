@@ -1,5 +1,4 @@
-﻿
-namespace Lebonfrancais.service
+﻿namespace Lebonfrancais.service
 {
     partial class FormOutilServices
     {
