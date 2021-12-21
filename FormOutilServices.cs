@@ -169,13 +169,19 @@ namespace Lebonfrancais.service
             cbArrondissement.Visible = true;
             labelAr.Visible = true;
             cbArrondissement.Items.Clear();
-            int idDepartement = Convert.ToInt32(cbDepartement.SelectedIndex);
+            // recup du libelle selectionné
+            string idDe = Convert.ToString(cbDepartement.SelectedItem);
+            // chargement de l'id en fonction du nom
+            Controleur.VmodeleSe.chargerIdDe_selonNom(idDe);
+            // recup de l'id
+            int idDepartement = Convert.ToInt32(Controleur.VmodeleC.DT[3].Rows[0][0]);
+            //chargement des arrondissement en fonction de l'id departement
             Controleur.VmodeleSe.charger_ArrondissementSelonDepartement(idDepartement);
             if (cbDepartement.SelectedIndex != -1)
             {
                 if (Controleur.VmodeleC.DT[2].Rows.Count == 0)
                 {
-                    //
+                    cbArrondissement.Items.Add("il n'y a rien en base");
                 }
                 else
                 {

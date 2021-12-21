@@ -17,7 +17,8 @@ namespace Lebonfrancais.service
         }
         public void charger_ArrondissementSelonDepartement(int idDe)
         {
-            Controleur.VmodeleC.charger("select D.IDDEPARTEMENT, A.IDARRONDISSEMENT, A.NOM from arrondissement A INNER JOIN departement D ON A.IDDEPARTEMENT = D.IDDEPARTEMENT WHERE A.IDDEPARTEMENT = " + idDe + ";", Controleur.VmodeleC.DT[2]);
+            MessageBox.Show(idDe.ToString());
+            Controleur.VmodeleC.charger("select D.IDDEPARTEMENT, A.IDARRONDISSEMENT, A.NOM from arrondissement A INNER JOIN departement D ON A.IDDEPARTEMENT = D.IDDEPARTEMENT WHERE A.IDDEPARTEMENT like  " + idDe + ";", Controleur.VmodeleC.DT[2]);
         }
 
         public void chargerIdDe_selonNom(string nomDe)
@@ -31,7 +32,7 @@ namespace Lebonfrancais.service
         }
         public void charger_Departement()
         {
-            Controleur.VmodeleC.charger("select * from departement;", Controleur.VmodeleC.DT[5]);
+            Controleur.VmodeleC.charger("select * from 	departement;", Controleur.VmodeleC.DT[5]);
         }
 
 
@@ -152,7 +153,7 @@ namespace Lebonfrancais.service
                 return false;
             }
         }
-        public bool supprimerFormation(int id)
+        public bool supprimerService(int id)
         {
             try
             {

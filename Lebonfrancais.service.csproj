@@ -116,6 +116,9 @@
     <EmbeddedResource Include="FormContact.resx">
       <DependentUpon>FormContact.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOutilInscrits.resx">
+      <DependentUpon>FormOutilInscrits.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipale.resx">
       <DependentUpon>FormPrincipale.cs</DependentUpon>
     </EmbeddedResource>

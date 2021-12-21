@@ -70,7 +70,7 @@ namespace Lebonfrancais.service
 
         private void outilInscritToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormOutilInscrits formOutilInscrits = new FormOutilInscrits();
+            FormOutilInscrits formOutilInscrits = new FormOutilInscrits(-1);
             formOutilInscrits.Show();
         }
 
