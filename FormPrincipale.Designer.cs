@@ -36,15 +36,19 @@ namespace Lebonfrancais.service
             this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+
             this.gestionDesFormationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilInscritToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
             this.afficherLesInscritsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afficherLesServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
             this.Logo = new System.Windows.Forms.PictureBox();
+
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -68,8 +72,8 @@ namespace Lebonfrancais.service
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connexionToolStripMenuItem,
-            this.gestionDesFormationsToolStripMenuItem,
-            this.aideToolStripMenuItem,
+            this.outilToolStripMenuItem,
+            this.affichageToolStripMenuItem,
             this.contactToolStripMenuItem,
             this.statistiqueToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -94,7 +98,7 @@ namespace Lebonfrancais.service
             this.deconnexionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.deconnexionToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Menu;
             this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.deconnexionToolStripMenuItem.Text = "Deconnexion";
             this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
             // 
@@ -103,7 +107,7 @@ namespace Lebonfrancais.service
             this.reconnecterToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.reconnecterToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Menu;
             this.reconnecterToolStripMenuItem.Name = "reconnecterToolStripMenuItem";
-            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.reconnecterToolStripMenuItem.Text = "Reconnecter";
             this.reconnecterToolStripMenuItem.Click += new System.EventHandler(this.reconnecterToolStripMenuItem_Click);
             // 
@@ -111,19 +115,21 @@ namespace Lebonfrancais.service
             // 
             this.quitterToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
-            // gestionDesFormationsToolStripMenuItem
+            // outilToolStripMenuItem
             // 
-            this.gestionDesFormationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.outilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.outilInscritToolStripMenuItem,
             this.outilServicesToolStripMenuItem});
+
             this.gestionDesFormationsToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.gestionDesFormationsToolStripMenuItem.Name = "gestionDesFormationsToolStripMenuItem";
             this.gestionDesFormationsToolStripMenuItem.Size = new System.Drawing.Size(51, 21);
             this.gestionDesFormationsToolStripMenuItem.Text = "Outil";
+
             // 
             // outilInscritToolStripMenuItem
             // 
@@ -143,6 +149,7 @@ namespace Lebonfrancais.service
             this.outilServicesToolStripMenuItem.Text = "outil Services";
             this.outilServicesToolStripMenuItem.Click += new System.EventHandler(this.outilServicesToolStripMenuItem_Click);
             // 
+
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -152,6 +159,7 @@ namespace Lebonfrancais.service
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(79, 21);
             this.aideToolStripMenuItem.Text = "Affichage";
+
             // 
             // afficherLesInscritsToolStripMenuItem
             // 
@@ -173,14 +181,17 @@ namespace Lebonfrancais.service
             // 
             // contactToolStripMenuItem
             // 
+
             this.contactToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+
             this.contactToolStripMenuItem.Text = "Contact";
             this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
             // statistiqueToolStripMenuItem
             // 
+
             this.statistiqueToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
             this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
@@ -198,7 +209,7 @@ namespace Lebonfrancais.service
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 9;
             this.Logo.TabStop = false;
-            // 
+
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,8 +237,8 @@ namespace Lebonfrancais.service
         private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reconnecterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gestionDesFormationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem outilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem affichageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outilInscritToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outilServicesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem afficherLesInscritsToolStripMenuItem;

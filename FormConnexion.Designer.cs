@@ -1,4 +1,4 @@
-﻿
+
 namespace Lebonfrancais.service
 {
     partial class FormConnexion
@@ -47,10 +47,12 @@ namespace Lebonfrancais.service
             this.btnConnexion.Location = new System.Drawing.Point(149, 316);
             this.btnConnexion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConnexion.Name = "btnConnexion";
+
             this.btnConnexion.Size = new System.Drawing.Size(192, 69);
             this.btnConnexion.TabIndex = 3;
             this.btnConnexion.Text = "Se connecter";
             this.btnConnexion.UseVisualStyleBackColor = false;
+
             this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
             // tbMdp
@@ -58,17 +60,23 @@ namespace Lebonfrancais.service
             this.tbMdp.Location = new System.Drawing.Point(273, 222);
             this.tbMdp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMdp.Name = "tbMdp";
+
             this.tbMdp.Size = new System.Drawing.Size(163, 22);
             this.tbMdp.TabIndex = 2;
             this.tbMdp.UseSystemPasswordChar = true;
+
             // 
             // tbLogin
             // 
             this.tbLogin.Location = new System.Drawing.Point(273, 156);
             this.tbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbLogin.Name = "tbLogin";
+
             this.tbLogin.Size = new System.Drawing.Size(163, 22);
             this.tbLogin.TabIndex = 0;
+
+            
+
             // 
             // label2
             // 

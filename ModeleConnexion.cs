@@ -56,7 +56,9 @@ namespace Lebonfrancais.service
         public void seconnecter()
         {
             // paramètres de connexion à modifier selon sa BD et son serveur de BD
-            string myConnectionString = "Database=lebonfrancais.service;Data Source=localhost;User Id=root; Password=;SslMode = none;";
+
+            string myConnectionString = "Database=lebonfrancais ;Data Source=localhost;User Id=root; Password= ;SslMode = none;";
+
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative 
             {

@@ -24,11 +24,11 @@ namespace Lebonfrancais.service
         {
             if (deconnexionToolStripMenuItem.Enabled == false)
             {
-                gestionDesFormationsToolStripMenuItem.Enabled = false;
+                outilToolStripMenuItem.Enabled = false;
             }
             else
             {
-                gestionDesFormationsToolStripMenuItem.Enabled = true;
+                outilToolStripMenuItem.Enabled = true;
             }
 
             reconnecterToolStripMenuItem.Enabled = false;
@@ -52,8 +52,12 @@ namespace Lebonfrancais.service
         {
             Controleur.VmodeleC.sedeconnecter();
             MessageBox.Show("Vous êtes déconnecté de la base de données");
-            gestionDesFormationsToolStripMenuItem.Enabled = false;
+            outilToolStripMenuItem.Enabled = false;
             deconnexionToolStripMenuItem.Enabled = false;
+            outilToolStripMenuItem.Enabled = false;
+            affichageToolStripMenuItem.Enabled = false;
+            contactToolStripMenuItem.Enabled = false;
+            statistiqueToolStripMenuItem.Enabled = false;
             FormPrincipale_Load(sender, e);
         }
 

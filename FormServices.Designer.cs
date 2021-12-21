@@ -68,6 +68,7 @@ namespace Lebonfrancais.service
             // 
             // btnSuppr
             // 
+
             this.btnSuppr.Location = new System.Drawing.Point(299, 543);
             this.btnSuppr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSuppr.Name = "btnSuppr";
@@ -83,6 +84,7 @@ namespace Lebonfrancais.service
             this.btnPasValider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPasValider.Name = "btnPasValider";
             this.btnPasValider.Size = new System.Drawing.Size(144, 42);
+
             this.btnPasValider.TabIndex = 3;
             this.btnPasValider.Text = "ne Pas Valider";
             this.btnPasValider.UseVisualStyleBackColor = true;
@@ -101,10 +103,12 @@ namespace Lebonfrancais.service
             // 
             // btnAjout
             // 
+
             this.btnAjout.Location = new System.Drawing.Point(153, 544);
             this.btnAjout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(100, 28);
+
             this.btnAjout.TabIndex = 1;
             this.btnAjout.Text = "Ajout";
             this.btnAjout.UseVisualStyleBackColor = true;
@@ -112,10 +116,12 @@ namespace Lebonfrancais.service
             // 
             // btnModif
             // 
+
             this.btnModif.Location = new System.Drawing.Point(20, 543);
             this.btnModif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModif.Name = "btnModif";
             this.btnModif.Size = new System.Drawing.Size(100, 28);
+
             this.btnModif.TabIndex = 0;
             this.btnModif.Text = "Modifier";
             this.btnModif.UseVisualStyleBackColor = true;
@@ -124,11 +130,13 @@ namespace Lebonfrancais.service
             // dgvServices
             // 
             this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             this.dgvServices.Location = new System.Drawing.Point(4, 4);
             this.dgvServices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.RowHeadersWidth = 51;
             this.dgvServices.Size = new System.Drawing.Size(863, 588);
+
             this.dgvServices.TabIndex = 0;
             // 
             // FormServices

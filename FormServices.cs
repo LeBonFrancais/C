@@ -59,6 +59,7 @@ namespace Lebonfrancais.service
             formOutilServices.Show();
         }
 
+
         private void btnSuppr_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Etes vous sur de vouloir supprimer cette Formation?", "AVERTISSEMENT", MessageBoxButtons.YesNo);
@@ -69,6 +70,7 @@ namespace Lebonfrancais.service
                 {
                     FormServices_Load(sender, e);
                 }
+
 
             }
             else if (dialogResult == DialogResult.No)

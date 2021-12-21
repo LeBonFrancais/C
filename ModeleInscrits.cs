@@ -25,7 +25,9 @@ namespace Lebonfrancais.service
 
 
 
-        public bool AjoutInscrit(string nom, string prenom, DateTime dateNais, string mail, int tel, string mdp, int credit, string etat, int idDepartement, int idAr)
+
+        public bool AjoutInscrit(string nom, string prenom, DateTime dateNais, string mail, int tel, string mdp, int credit, string etat ,int idDepartement, int idAr)
+
         {
             try
             {

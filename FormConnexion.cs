@@ -21,6 +21,7 @@ namespace Lebonfrancais.service
         {
             Controleur.initConnexion();
             Controleur.VmodeleC.seconnecter();
+            
             if (Controleur.VmodeleC.Connopen == false)
             {
                 MessageBox.Show("erreur dans la connexion");
@@ -28,7 +29,7 @@ namespace Lebonfrancais.service
             }
             else
             {
-                //MessageBox.Show("connexion réussi");
+                tbLogin.Focus();
             }
         }
 
@@ -65,9 +66,11 @@ namespace Lebonfrancais.service
                         tbLogin.Focus();
                     }
                 }
+
             }
             else 
                 MessageBox.Show("ERREUR : Saisir un nom et un mot de passe");
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +17,9 @@ namespace Lebonfrancais.service
         }
         public void charger_ArrondissementSelonDepartement(int idDe)
         {
-            MessageBox.Show(idDe.ToString());
-            Controleur.VmodeleC.charger("select D.IDDEPARTEMENT, A.IDARRONDISSEMENT, A.NOM from arrondissement A INNER JOIN departement D ON A.IDDEPARTEMENT = D.IDDEPARTEMENT WHERE A.IDDEPARTEMENT like  " + idDe + ";", Controleur.VmodeleC.DT[2]);
+
+            Controleur.VmodeleC.charger("select D.IDDEPARTEMENT, A.IDARRONDISSEMENT, A.NOM from arrondissement A INNER JOIN departement D ON A.IDDEPARTEMENT = D.IDDEPARTEMENT WHERE A.IDDEPARTEMENT = " + idDe + ";", Controleur.VmodeleC.DT[2]);
+
         }
 
         public void chargerIdDe_selonNom(string nomDe)
@@ -32,7 +33,9 @@ namespace Lebonfrancais.service
         }
         public void charger_Departement()
         {
-            Controleur.VmodeleC.charger("select * from 	departement;", Controleur.VmodeleC.DT[5]);
+
+            Controleur.VmodeleC.charger("select * from departement;", Controleur.VmodeleC.DT[5]);
+
         }
 
 
@@ -124,7 +127,9 @@ namespace Lebonfrancais.service
                 return false;
             }
         }
-        public bool modificationService(string libelle, string description, bool recherche, bool visible, int idInscrit, int idDepartement, int idArrondissement)
+
+        public bool modificationService(string libelle, string description,bool recherche, bool visible, int idInscrit, int idDepartement, int idArrondissement)
+
         {
             try
             {
@@ -154,6 +159,30 @@ namespace Lebonfrancais.service
             }
         }
         public bool supprimerService(int id)
+        {
+            try
+            {
+                //appel du controleur pour effectuer la requète de suppresion de la formation.
+                string requete = "Delete from service where IDSERVICE = @id ";
+                MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
+                command.CommandText = requete;
+
+                // mise à jour des paramètres de la requête préparée avec les infos passés en paramètre de la méthode
+                command.Parameters.AddWithValue("id", id);
+
+                // Exécution de la requête
+                int i = command.ExecuteNonQuery();
+
+                // i est positif si l'insertion a pu avoir lieu
+                return (i > 0);
+            }
+
+            catch
+            {
+                return false;
+            }
+        }
+        public bool supprimerFormation(int id)
         {
             try
             {

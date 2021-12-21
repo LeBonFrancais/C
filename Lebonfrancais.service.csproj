@@ -113,21 +113,30 @@
     <EmbeddedResource Include="FormConnexion.resx">
       <DependentUpon>FormConnexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormContact.resx">
-      <DependentUpon>FormContact.cs</DependentUpon>
+
+    <EmbeddedResource Include="FormInscrits.resx">
+      <DependentUpon>FormInscrits.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="FormOutilInscrits.resx">
       <DependentUpon>FormOutilInscrits.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="FormOutilServices.resx">
+      <DependentUpon>FormOutilServices.cs</DependentUpon>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="FormPrincipale.resx">
       <DependentUpon>FormPrincipale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormServices.resx">
       <DependentUpon>FormServices.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="FormStatistique.resx">
       <DependentUpon>FormStatistique.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

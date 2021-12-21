@@ -1,4 +1,4 @@
-﻿
+
 namespace Lebonfrancais.service
 {
     partial class FormOutilInscrits
@@ -40,6 +40,7 @@ namespace Lebonfrancais.service
             this.cbDepartement = new System.Windows.Forms.ComboBox();
             this.tbPrenom = new System.Windows.Forms.TextBox();
             this.tbNom = new System.Windows.Forms.TextBox();
+
             this.label6 = new System.Windows.Forms.Label();
             this.tbCredit = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,45 +53,55 @@ namespace Lebonfrancais.service
             this.tbMail = new System.Windows.Forms.TextBox();
             this.dtpNaiss = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+
             this.SuspendLayout();
             // 
             // labelAr
             // 
             this.labelAr.AutoSize = true;
+
             this.labelAr.Location = new System.Drawing.Point(83, 545);
             this.labelAr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAr.Name = "labelAr";
             this.labelAr.Size = new System.Drawing.Size(107, 17);
+
             this.labelAr.TabIndex = 29;
             this.labelAr.Text = "Arrondissement";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+
             this.label5.Location = new System.Drawing.Point(97, 486);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 17);
+
             this.label5.TabIndex = 28;
             this.label5.Text = "Departement";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+
             this.label2.Location = new System.Drawing.Point(111, 143);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
+
+
             this.label2.TabIndex = 25;
             this.label2.Text = "prenom";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+
             this.label1.Location = new System.Drawing.Point(111, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 17);
+
             this.label1.TabIndex = 24;
             this.label1.Text = "nom";
             // 
@@ -100,12 +111,14 @@ namespace Lebonfrancais.service
             this.btnFermer.Margin = new System.Windows.Forms.Padding(4);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(100, 28);
+
             this.btnFermer.TabIndex = 23;
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
             // 
             // btnAnnuler
             // 
+
             this.btnAnnuler.Location = new System.Drawing.Point(235, 619);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnnuler.Name = "btnAnnuler";
@@ -123,22 +136,26 @@ namespace Lebonfrancais.service
             this.btnAjoutModif.TabIndex = 9;
             this.btnAjoutModif.UseVisualStyleBackColor = true;
             this.btnAjoutModif.Click += new System.EventHandler(this.btnAjoutModif_Click_1);
+
             // 
             // cbArrondissement
             // 
             this.cbArrondissement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbArrondissement.FormattingEnabled = true;
+
             this.cbArrondissement.Location = new System.Drawing.Point(235, 535);
             this.cbArrondissement.Margin = new System.Windows.Forms.Padding(4);
             this.cbArrondissement.Name = "cbArrondissement";
             this.cbArrondissement.Size = new System.Drawing.Size(160, 24);
             this.cbArrondissement.TabIndex = 61;
             
+
             // 
             // cbDepartement
             // 
             this.cbDepartement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartement.FormattingEnabled = true;
+
             this.cbDepartement.Location = new System.Drawing.Point(235, 476);
             this.cbDepartement.Margin = new System.Windows.Forms.Padding(4);
             this.cbDepartement.Name = "cbDepartement";
@@ -161,10 +178,12 @@ namespace Lebonfrancais.service
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(132, 22);
             this.tbNom.TabIndex = 0;
+
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+
             this.label6.Location = new System.Drawing.Point(93, 438);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -179,10 +198,12 @@ namespace Lebonfrancais.service
             this.tbCredit.Name = "tbCredit";
             this.tbCredit.Size = new System.Drawing.Size(132, 22);
             this.tbCredit.TabIndex = 7;
+
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+
             this.label7.Location = new System.Drawing.Point(37, 365);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -287,6 +308,7 @@ namespace Lebonfrancais.service
             this.Controls.Add(this.tbConfMdp);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbCredit);
+
             this.Controls.Add(this.labelAr);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -319,6 +341,7 @@ namespace Lebonfrancais.service
         private System.Windows.Forms.ComboBox cbDepartement;
         private System.Windows.Forms.TextBox tbPrenom;
         private System.Windows.Forms.TextBox tbNom;
+
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbCredit;
         private System.Windows.Forms.Label label7;
@@ -331,5 +354,6 @@ namespace Lebonfrancais.service
         private System.Windows.Forms.TextBox tbMail;
         private System.Windows.Forms.DateTimePicker dtpNaiss;
         private System.Windows.Forms.Label label3;
+
     }
 }
